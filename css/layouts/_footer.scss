@@ -1,0 +1,108 @@
+footer{
+    position: relative;
+    background-color: $Very-Light-Gray;
+    padding:4.5rem 0;
+    z-index: 1;
+    picture{
+        position: absolute;
+        top:0;
+        left:-8rem;
+        max-width: 100%;
+        z-index: -1;
+    }
+    .container{
+        width: 90%;
+        margin-left: auto;
+        padding-right: 3rem;
+        .flex-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $Dark-Grayish-Violet;
+            padding:2rem 0;
+            .logo{
+                width:120px;
+            }
+            .links{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    li{
+                        margin-left: 1rem;
+                        list-style: none;
+                        a{
+                            img{
+                                max-width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-grid{
+            margin-bottom: 2rem;
+            margin-top:2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-gap: 1rem;
+            .box{
+                ul{
+                    li{
+                        list-style: none;
+                        &:nth-child(1){
+                            margin-bottom: 2.5rem;
+                            a{
+                                color:$Dark-Grayish-Violet;
+                                font-weight: 400;
+                            }
+                        }
+                        margin:1rem 0;
+                        a{
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            color:$very-Dark-Violet;
+                            font-size: .9rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .attribution{
+        background-color: $very-Dark-Violet;
+        text-align: center;
+        font-weight: 700;
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        padding:2rem 0;
+        p{
+            color:$Very-Light-Gray;
+            a{
+                color:$Dark-Grayish-Violet;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:530px) {
+    footer{
+        .container{
+            margin:0 auto;
+            padding:0;
+            .flex-container{
+                flex-direction: column;
+                .logo{
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .footer-grid{
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.home-section{
+    background-color: $dark-Violet;
+    position: relative;
+    .svg{
+        position: absolute;
+        left: -8rem;
+        top:30rem;
+        max-width: 200px;
+    }
+    
+    .svg-top{
+        position: absolute;
+        bottom:-27rem;
+        right:-14rem;
+        max-width: 100%;
+        z-index: 2;
+    }
+    
+    
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        .right-container{
+            grid-row:1/2;
+        }
+        .left-container{
+            position: relative;
+            padding:6rem 1rem;
+            padding-bottom: 6.4rem;
+            color:$Very-Light-Gray;
+            text-align: center;
+            
+            h1{
+                font-size: 2.7rem;
+                font-weight: 700;
+                margin-bottom: .2em;
+            }
+            p{
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 25px;
+                padding:0 1rem;
+                margin-bottom: 3em;
+            }
+            a{
+                color:$Very-Light-Gray;
+                text-transform: uppercase;
+                font-size: 1rem;
+                text-decoration: none;
+                border:1px solid $Very-Light-Gray;
+                padding:.6rem 1.4rem;
+                transition: .3s ease;
+                &:hover{
+                    background-color: $Very-Light-Gray;
+                    color:$very-Dark-Violet;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .home-section{
+        height: 600px;
+        .svg{
+            left: 0;
+            bottom:-25rem;
+        }
+        
+        .svg-top{
+            top:0rem;
+            right:-4rem;
+            width:400px;
+        }
+        .container{
+            width:95%;
+            padding-top:6rem;
+            grid-template-columns:repeat(2,1fr);
+            .left-container{
+                text-align: left;
+                grid-column: 1/2;
+                margin:0;
+                padding-left: 0;
+                padding-top:4rem;
+                padding-left: 1rem;
+                
+                h1{
+                    font-size: 4rem;
+                    max-width: 500px;
+                }
+                p{
+                    padding: 0;
+                    font-size: 1.07rem;
+                    color:$Very-Light-Gray;
+                }
+                
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width:170px;
+                    height: 2px;
+                    background-color: $Very-Light-Gray;
+                    background-image: none;
+                    margin-left: 1rem;
+                }
+            }
+            
+            .right-container{
+                grid-column: 2/3;
+                width:550px;
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+}
